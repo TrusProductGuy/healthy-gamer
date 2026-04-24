@@ -4,6 +4,7 @@
   <title>AI Knowledge Interface</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
@@ -11,68 +12,72 @@
       display: flex;
       height: 100vh;
       overflow: hidden;
-      background: #0b1220;
+      background: #050b14;
       color: #e5e7eb;
     }
 
+    /* LEFT PANEL (CONTENT) */
     .left {
       width: 70%;
-      background: linear-gradient(180deg, #0b1220 0%, #111827 100%);
-      padding: 48px;
+      padding: 56px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      background: radial-gradient(circle at top, #0b1220, #050b14 60%);
       border-right: 1px solid rgba(255,255,255,0.06);
     }
 
     .badge {
-      color: #22c55e;
-      font-size: 12px;
-      letter-spacing: 1px;
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
+      color: #22c55e;
       margin-bottom: 16px;
       font-weight: 600;
     }
 
-    .left h1 {
-      font-size: 38px;
-      margin-bottom: 12px;
-      line-height: 1.2;
+    h1 {
+      font-size: 42px;
+      line-height: 1.15;
+      margin: 0 0 14px 0;
       font-weight: 700;
     }
 
     .sub {
-      color: #9ca3af;
       font-size: 15px;
-      margin-bottom: 24px;
+      color: #9ca3af;
       line-height: 1.6;
+      max-width: 620px;
+      margin-bottom: 24px;
     }
 
     .section {
-      margin-top: 18px;
+      max-width: 650px;
+      margin-bottom: 16px;
       font-size: 14px;
-      line-height: 1.6;
+      line-height: 1.65;
       color: #cbd5f5;
     }
 
     .card {
       background: rgba(255,255,255,0.03);
-      padding: 16px;
-      border-radius: 10px;
-      margin-top: 16px;
       border: 1px solid rgba(255,255,255,0.06);
-      font-size: 13px;
-      line-height: 1.6;
+      padding: 14px 16px;
+      border-radius: 10px;
+      margin-top: 14px;
     }
 
     .card strong {
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       color: #f9fafb;
+      font-size: 13px;
+      letter-spacing: 0.2px;
     }
 
     .example {
-      margin-top: 10px;
+      margin-top: 8px;
       color: #93c5fd;
       font-size: 13px;
     }
@@ -81,96 +86,104 @@
       margin-top: 28px;
       font-size: 13px;
       color: #9ca3af;
-      line-height: 1.6;
+      max-width: 600px;
     }
 
+    /* RIGHT PANEL (CHAT) */
     .right {
-      width: 58%;
-      height: 100vh;
+      width: 30%;
       display: flex;
       flex-direction: column;
+      background: #0b1220;
     }
 
     .chat-header {
       padding: 14px 16px;
-      background: #111827;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      font-size: 13px;
+      font-size: 12px;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
       color: #9ca3af;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      background: #0b1220;
     }
 
     iframe {
       width: 100%;
-      height: calc(100vh - 48px);
+      height: 100%;
       border: none;
     }
 
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       body {
         flex-direction: column;
         overflow: auto;
       }
+
       .left, .right {
         width: 100%;
         height: auto;
       }
-      iframe {
+
+      .right {
         height: 600px;
       }
     }
   </style>
 </head>
+
 <body>
 
-<div class="left">
-  <div class="badge">AI KNOWLEDGE SYSTEM</div>
+  <!-- LEFT -->
+  <div class="left">
 
-  <h1>Turn Content Into a Thinking Partner</h1>
+    <div class="badge">AI KNOWLEDGE SYSTEM</div>
 
-  <div class="sub">
-    An interactive interface built from HealthyGamer content that simulates how Dr. K breaks down motivation, anxiety, identity, and behavior.
-  </div>
+    <h1>Turn Content Into a Thinking Partner</h1>
 
-  <div class="card">
-    <strong>Why this exists</strong>
-    When stepping into a new domain, most leaders rely on scattered notes, passive consumption, and slow synthesis.
-    This system turns content into something interactive—so you can interrogate ideas, not just consume them.
-  </div>
-
-  <div class="card">
-    <strong>What this enables</strong>
-    • Explore behavioral patterns like procrastination and avoidance<br>
-    • Understand anxiety and emotional regulation frameworks<br>
-    • Surface underlying causes instead of surface advice<br>
-    • Turn long-form content into structured thinking tools
-
-    <div class="example">
-      Try: “Why do I procrastinate even when I care?”
+    <div class="sub">
+      A lightweight interface that simulates how Dr. K breaks down motivation, anxiety, identity, and behavior—built to accelerate understanding in new domains.
     </div>
-  </div>
 
-  <div class="card">
-    <strong>How I’d use this in a new org</strong>
-    Ingest customer calls, support tickets, and product docs → build an interactive system to explore patterns → accelerate onboarding and decision-making across product teams.
-  </div>
-
-  <div class="card">
-    <strong>Example insight</strong>
-    “Procrastination is often less about motivation and more about avoidance of emotional discomfort.”
-    <div class="example">
-      This is the type of pattern recognition I’d want when analyzing user behavior at scale.
+    <div class="card">
+      <strong>Why this exists</strong>
+      Leaders don’t struggle with lack of information—they struggle with synthesis. This system turns static content into something you can interrogate, stress-test, and apply.
     </div>
+
+    <div class="card">
+      <strong>What it enables</strong>
+      • Understand behavioral patterns (procrastination, avoidance)<br>
+      • Explore emotional regulation frameworks<br>
+      • Move from surface answers → causal reasoning<br>
+      • Compress long-form learning into usable mental models
+
+      <div class="example">
+        Try: “Why do I procrastinate even when I care?”
+      </div>
+    </div>
+
+    <div class="card">
+      <strong>Example insight</strong>
+      “Procrastination is often emotional avoidance, not motivation failure.”
+      <div class="example">
+        This is the type of pattern recognition that improves product intuition quickly.
+      </div>
+    </div>
+
+    <div class="hire">
+      Built by Andy — a product leader who uses AI systems to help teams learn faster and make better decisions.
+    </div>
+
   </div>
 
-  <div class="hire">
-    Built by Andy — a product leader who applies AI to help teams learn faster and make better product decisions.
-  </div>
-</div>
+  <!-- RIGHT -->
+  <div class="right">
+    <div class="chat-header">Ask a question</div>
 
-<div class="right">
-  <div class="chat-header">Ask a question</div>
-  <iframe src="https://www.chatbase.co/chatbot-iframe/BTIHHrSQ1MsXZVreq5kcu"></iframe>
-</div>
+    <iframe
+      src="https://www.chatbase.co/chatbot-iframe/BTIHHrSQ1MsXZVreq5kcu">
+    </iframe>
+  </div>
 
 </body>
 </html>
