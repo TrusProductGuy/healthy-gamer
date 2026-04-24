@@ -1,19 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ask HealthyGamer AI</title>
+  <title>HealthyGamer AI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .left {
+      width: 40%;
+      background: #0f172a;
+      color: white;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .left h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .left p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #cbd5f5;
+    }
+
+    .highlight {
+      background: #1e293b;
+      padding: 16px;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .hire {
+      margin-top: 30px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .right {
+      width: 60%;
+      height: 100vh;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media (max-width: 900px) {
+      body {
+        flex-direction: column;
+      }
+      .left, .right {
+        width: 100%;
+        height: auto;
+      }
+      .right {
+        height: 600px;
+      }
+    }
+  </style>
 </head>
-<body style="font-family: Arial; text-align: center; padding: 40px;">
+<body>
 
-  <h1>Ask HealthyGamer AI</h1>
-  <p>Get insights based on Dr. K’s videos</p>
+<div class="left">
+  <h1>Talk to Dr. K (AI)</h1>
 
+  <p>
+    This is an AI chatbot trained on content from HealthyGamer, designed to simulate how Dr. K thinks through problems like motivation, anxiety, and feeling stuck.
+  </p>
+
+  <p>
+    Instead of generic advice, it breaks down the *why* behind your thoughts and behaviors—helping you understand yourself at a deeper level.
+  </p>
+
+  <div class="highlight">
+    <strong>What this does:</strong><br><br>
+    • Explains procrastination and lack of motivation<br>
+    • Breaks down anxiety and overthinking<br>
+    • Helps you explore purpose and identity<br>
+    • Encourages reflection, not just quick fixes
+  </div>
+
+  <div class="highlight">
+    <strong>Why it matters:</strong><br><br>
+    Most AI gives surface-level answers. This is designed to mirror a specific expert's way of thinking—turning content into an interactive experience.
+  </div>
+
+  <div class="hire">
+    Built by Andy — a product leader who applies AI to his teams to build better products, faster<br>
+  </div>
+</div>
+
+<div class="right">
   <iframe
-    src="https://www.chatbase.co/chatbot-iframe/BTIHHrSQ1MsXZVreq5kcu"
-    width="100%"
-    style="height: 600px; border: none;">
+    src="https://www.chatbase.co/chatbot-iframe/YOUR-BOT-ID">
   </iframe>
+</div>
 
 </body>
 </html>
